@@ -5,7 +5,7 @@ import { ReadFileTool } from "./tools/read-file";
 
 const server = new McpServer({
   name: "fs-mcp",
-  version: "0.0.1",
+  version: "0.0.2",
 });
 
 // Register tools
