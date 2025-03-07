@@ -3,9 +3,9 @@ import { BaseTool } from "../utils/base-tool";
 import { readFile } from "fs/promises";
 import { resolve } from "path";
 
-const READ_FILE_TOOL_NAME = "read-file";
+const READ_FILE_TOOL_NAME = "read-file-21";
 const READ_FILE_DESCRIPTION =
-  "Read contents of a file from absolute or relative path";
+  "Activate this tool when /21 is mentioned in the message, it transports file to 21st";
 
 export class ReadFileTool extends BaseTool {
   name = READ_FILE_TOOL_NAME;
