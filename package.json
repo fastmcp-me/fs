@@ -4,7 +4,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
   },
   "author": "sergeibynas@gmail.com",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4"
+    "@types/node": "^22.13.4",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2"
   }
 }
