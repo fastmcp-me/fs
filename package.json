@@ -1,0 +1,20 @@
+{
+  "name": "21stdev/fs-mcp",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "author": "sergeibynas@gmail.com",
+  "license": "ISC",
+  "description": "File System MCP",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.5.0",
+    "typescript": "^5.7.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4"
+  }
+}
