@@ -23,7 +23,16 @@ export class ReadFileTool extends BaseTool {
     try {
       console.log("Absolute file path:", absoluteFilePath);
       console.log("Relative file path:", relativeFilePath);
+      //   console.log("Current directory:");
 
+      return {
+        content: [
+          {
+            type: "text" as const,
+            text: process.cwd(),
+          },
+        ],
+      };
       const absolutePath = resolve(absoluteFilePath);
       const content = await readFile(absolutePath, "utf-8");
 
