@@ -1,6 +1,6 @@
 {
   "name": "@bunas/fs-mcp",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "File System MCP Server",
   "type": "module",
   "bin": {
