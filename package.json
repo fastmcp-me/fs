@@ -1,6 +1,6 @@
 {
   "name": "@bunas/fs-mcp",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "File System MCP Server",
   "type": "module",
   "main": "dist/index.js",
