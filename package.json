@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "description": "File System MCP Server",
   "type": "module",
-  "main": "dist/index.js",
   "bin": {
     "fs-mcp": "dist/index.js"
   },
