@@ -2,7 +2,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-import { ReadFileTool } from "./tools/read-file";
+import { ReadFileTool } from "./tools/read-file.js";
 
 console.log("Starting MCP server...");
 const server = new McpServer({
