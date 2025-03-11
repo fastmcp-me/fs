@@ -4,7 +4,7 @@
   "description": "File System MCP Server",
   "type": "module",
   "bin": {
-    "fs-mcp": "dist/index.js"
+    "@bunas/fs-mcp": "dist/index.js"
   },
   "files": [
     "dist"
