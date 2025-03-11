@@ -3,6 +3,7 @@
   "version": "1.0.10",
   "description": "File System MCP Server",
   "type": "module",
+  "main": "dist/index.js",
   "bin": {
     "@bunas/fs-mcp": "dist/index.js"
   },
