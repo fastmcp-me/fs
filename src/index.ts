@@ -4,6 +4,29 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 
 import { ReadFileTool } from "./tools/read-file.js";
 
+// Parse command line arguments
+function parseArgs() {
+  const args = process.argv.slice(2);
+  const params: Record<string, string> = {};
+
+  for (const arg of args) {
+    if (arg.startsWith("--") || arg.startsWith("—")) {
+      const [key, value] = arg.replace(/^(-{1,2}|—)/, "").split("=");
+      if (key && value) {
+        params[key] = value.replace(/^["'](.*)["']$/, "$1");
+      }
+    }
+  }
+
+  return params;
+}
+
+const params = parseArgs();
+const API_KEY = params.API_KEY || process.env.API_KEY;
+
+console.log("PARAMS", params);
+console.log("API_KEY", API_KEY);
+
 console.log("Starting MCP server...");
 const server = new McpServer({
   name: "fs-mcp",
@@ -11,7 +34,7 @@ const server = new McpServer({
 });
 
 // Register tools
-new ReadFileTool().register(server);
+new ReadFileTool(API_KEY, params).register(server);
 
 async function runServer() {
   const transport = new StdioServerTransport();

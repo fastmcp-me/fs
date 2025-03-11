@@ -39,6 +39,8 @@ export class ReadFileTool extends BaseTool {
         })),
         platform: process.platform,
         env: process.env.NODE_ENV,
+        apiKeyProvided: !!this.apiKey,
+        params: this.params,
       };
 
       const content = await readFile(absoluteFilePath, "utf-8");
@@ -88,6 +90,7 @@ export class ReadFileTool extends BaseTool {
                       }))
                     ),
                     platform: process.platform,
+                    apiKeyProvided: !!this.apiKey,
                   },
                 },
               },
